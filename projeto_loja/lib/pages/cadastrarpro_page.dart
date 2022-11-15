@@ -10,73 +10,385 @@ Widget build(BuildContext context){
       title: const Text('Cadastrar Produtos'),
       centerTitle: true,
     ),
-    body: ListView(
-      children: [
-        Container(
-          margin: EdgeInsets.all(15.0),
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.topLeft,
-          width: 30.54,
-          height: 140,
-          decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            borderRadius: BorderRadius.circular(16.0),
-          ),
-          child: Text(
-              "  Leonardo J S Lima\n"
-              "\n0000 0000 1111 2222\n"
-              "\n21/28",
-            style: TextStyle(
-                fontSize: 20,
-                //fontWeight: FontWeight.w900,
-                color: Colors.white
-            ),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.all(10.0),
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.topLeft,
-          width: 100,
-          height: 140,
-          decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            borderRadius: BorderRadius.circular(16.0),
-          ),
-          child: Text(
-            "  Leonardo J S Lima\n"
-                "\n0000 0000 1111 2222\n"
-                "\n21/28",
-            style: TextStyle(
-                fontSize: 20,
-                //fontWeight: FontWeight.w900,
-                color: Colors.white
-            ),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.all(10.0),
-          padding: EdgeInsets.all(10.0),
-          alignment: Alignment.topLeft,
-          //width: 100,
-          height: 140,
-          decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            borderRadius: BorderRadius.circular(16.0),
-          ),
-          child: Text(
-            "  Leonardo J S Lima\n"
-                "\n0000 0000 1111 2222\n"
-                "\n21/28",
-            style: TextStyle(
-                fontSize: 20,
-                //fontWeight: FontWeight.w900,
-                color: Colors.white
-            ),
-          ),
-        ),
-      ],
-    ),
+    body: _listOnline(),
   );
 }
+
+  Widget _listOnline() {
+    return ListView(
+      scrollDirection: Axis.vertical,
+
+      children: [
+        const Text(
+          "Produtos cadastrados: ",
+        style: TextStyle(
+          fontSize: 30,),
+            textAlign: TextAlign.center
+        ),
+        Column(
+          /* Item 1 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                padding: EdgeInsets.only(left: 22),
+                width: 1000,
+                height: 62,
+                decoration: BoxDecoration(
+                  border: Border(
+                    top: BorderSide(
+                        width: 2,
+                        color: Colors.black12,
+                        style: BorderStyle.solid), //BorderSide
+                    bottom: BorderSide(
+                        width: 2,
+                        color: Colors.black12,
+                        style: BorderStyle.solid), //BorderSide
+                    left: BorderSide(
+                        width: 2,
+                        color: Colors.black12,
+                        style: BorderStyle.solid), //Borderside
+                    right: BorderSide(
+                        width: 2,
+                        color: Colors.black12,
+                        style: BorderStyle.solid), //BorderSide
+                  ),
+                  borderRadius: BorderRadius.circular(6.0),
+                ),
+                child: (
+                    Text("Monster Energy Ultra Paradise 473ml\n"
+                        "  RS 9,10",
+                        style: TextStyle(
+                          fontSize: 18,
+                        )
+                    )
+                )
+            ),
+          ],
+        ),
+        Column(
+          /* Item 2 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Monster Mango Loco 473ml\n"
+                  "  RS 10,07",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 3 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Monster Ultra Lata 473ml\n"
+                  "  RS 10,00",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 4 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("TNT Focus 473ml\n"
+                  "  RS 7,99",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 5 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("TNT Citrus 269ml\n"
+                  "  RS 5,90",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 6 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Red Bull 473ml\n"
+                  "  RS 7,19",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 7 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Red Bull Sugar Free 250ml\n"
+                  "  RS 6,50",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 8 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Baily Melancia 473ml\n"
+                  "  RS 5,81",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+        Column(
+          /* Item 9 */
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(6.0),
+              ),
+
+              child: Text("Baily Tropical 473ml\n"
+                  "  RS 5,81",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )),
+            ),
+          ],
+        ),
+
+      ],
+    );
+  }
 }
