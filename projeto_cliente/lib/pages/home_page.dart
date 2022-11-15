@@ -158,7 +158,11 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Column(
+<<<<<<< HEAD
             /* Item 1 */
+=======
+            /* Item 2 */
+>>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -199,6 +203,113 @@ class HomePage extends StatelessWidget {
                       )
                   )
               ),
+<<<<<<< HEAD
+=======
+
+            ],
+          ),
+          Column(
+            /* Item 3 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                  padding: EdgeInsets.only(left: 22),
+                  width: 1000,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      bottom: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      left: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //Borderside
+                      right: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                    ),
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                  child: (
+                      Text("Disk Bebidas\n",
+
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'Montserrat',
+                        ),
+                        //textAlign: TextAlign.center,
+                      )
+                  )
+              ),
+            ],
+          ),
+          Row(children: [
+            Container(
+              width: 180,
+              height: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Text(
+                "\n \n"
+                    "Lojas:\n",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ]),
+          Column(
+            /* Item 1 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                  padding: EdgeInsets.only(left: 22),
+                  width: 1000,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      bottom: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      left: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //Borderside
+                      right: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                    ),
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                  child: (
+                      Text("Distribuidora José\n"
+                        ,
+
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
+                        //textAlign: TextAlign.center,
+                      )
+                  )
+              ),
+>>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
             ],
           ),
         ],
