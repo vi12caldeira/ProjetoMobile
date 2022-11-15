@@ -158,11 +158,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Column(
-<<<<<<< HEAD
-            /* Item 1 */
-=======
-            /* Item 2 */
->>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -203,8 +198,6 @@ class HomePage extends StatelessWidget {
                       )
                   )
               ),
-<<<<<<< HEAD
-=======
 
             ],
           ),
@@ -309,7 +302,6 @@ class HomePage extends StatelessWidget {
                       )
                   )
               ),
->>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
             ],
           ),
         ],
