@@ -12,84 +12,82 @@ class CuponsPage extends StatelessWidget {
       ),
       body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children:<Widget>[
-      Container(
-      decoration:BoxDecoration(
-          border: Border(
-            top: BorderSide(
-                width: 2,
-                color: Colors.black12,
-                style: BorderStyle.solid), //BorderSide
-            bottom: BorderSide(
-                width: 2,
-                color: Colors.black12,
-                style: BorderStyle.solid), //BorderSide
-            left: BorderSide(
-                width: 2,
-                color: Colors.black12,
-                style: BorderStyle.solid), //Borderside
-            right: BorderSide(
-                width: 2,
-                color: Colors.black12,
-                style: BorderStyle.solid), //BorderSide
-          ), //Border
-          borderRadius:BorderRadius.circular(5),
-        //color:Colors.green
-    ),
-    child: Text(
-      "Cupom de final de semana\n"
-      "\nResgate seu cupom e ganhe \n20% de desconto"
-      "\n" "\n" "\n" "\n" "\n" "\n" "\n"
-      "Promoção válida somente para \nas lojas participantes:\n"
-      "      Bar do Zé\n"
-      "      Cantin da cachaça\n"
-      "      Distribuidora Dora\n"
-      "      Disk driks\n"
-      "      Buteco Seu Carlos\n"
-      "Obs.: Válido somente para \ncompras acima de R 30,00",
-      style: TextStyle(
-          color:Colors.black,
-          fontSize:18),
-    ),
-    ),
-
-    Container(
-    decoration:BoxDecoration(
-      border: Border(
-        top: BorderSide(
-            width: 2,
-            color: Colors.black12,
-            style: BorderStyle.solid), //BorderSide
-        bottom: BorderSide(
-            width: 2,
-            color: Colors.black12,
-            style: BorderStyle.solid), //BorderSide
-        left: BorderSide(
-            width: 2,
-            color: Colors.black12,
-            style: BorderStyle.solid), //Borderside
-        right: BorderSide(
-            width: 2,
-            color: Colors.black12,
-            style: BorderStyle.solid), //BorderSide
-      ),
-      borderRadius:BorderRadius.circular(5),
-    //color:Colors.green
-    ),
-    child: Text(
-      " Cupom para curtir com a familia\n"
-      "\n  Esse cupom é para você que quer \n  curtir o feriadão com a familia\n"
-      "\n  Resgate agora um super cupom para \n  ter desconto de R 50,00 em compras!!"
-      "\n \n \n",
-      style: TextStyle(
-          color:Colors.black,
-          fontSize:18),),
-    ),
-          ]
-      ),
-
-
-
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ), //Border
+                borderRadius: BorderRadius.circular(5),
+                //color:Colors.green
+              ),
+              child: Text(
+                "Cupom de final de semana\n"
+                "\nResgate seu cupom e ganhe \n20% de desconto"
+                "\n"
+                "\n"
+                "\n"
+                "\n"
+                "\n"
+                "\n"
+                "\n"
+                "Promoção válida somente para \nas lojas participantes:\n"
+                "      Bar do Zé\n"
+                "      Cantin da cachaça\n"
+                "      Distribuidora Dora\n"
+                "      Disk driks\n"
+                "      Buteco Seu Carlos\n"
+                "Obs.: Válido somente para \ncompras acima de R 30,00",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  bottom: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                  left: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //Borderside
+                  right: BorderSide(
+                      width: 2,
+                      color: Colors.black12,
+                      style: BorderStyle.solid), //BorderSide
+                ),
+                borderRadius: BorderRadius.circular(5),
+                //color:Colors.green
+              ),
+              child: Text(
+                " Cupom para curtir com a familia\n"
+                "\n  Esse cupom é para você que quer \n  curtir o feriadão com a familia\n"
+                "\n  Resgate agora um super cupom para \n  ter desconto de R 50,00 em compras!!"
+                "\n \n \n",
+                style: TextStyle(color: Colors.black, fontSize: 18),
+              ),
+            ),
+          ]),
 
       /*Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,7 +113,7 @@ class CuponsPage extends StatelessWidget {
         ],
       )
 */
-          /*
+      /*
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -132,7 +130,7 @@ class CuponsPage extends StatelessWidget {
             ]
         ),*/
 
-        /*margin: EdgeInsets.all(10.0),
+      /*margin: EdgeInsets.all(10.0),
         padding: EdgeInsets.all(10.0),
         alignment: Alignment.topLeft,
         //width: 100,
@@ -141,9 +139,6 @@ class CuponsPage extends StatelessWidget {
           color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(16.0),
         ),*/
-
-
-
     );
   }
 }
