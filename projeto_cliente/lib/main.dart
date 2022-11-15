@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:navegacao_drawer/routes.dart';
 
-//import 'pages/home_page.dart';
+import 'pages/home_page.dart';
 main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,11 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.indigo,
       ),
       routes: routes(),
     );
   }
 }
-
 
