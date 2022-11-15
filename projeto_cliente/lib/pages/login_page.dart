@@ -8,49 +8,90 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  static const emailRegex =
+      r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
+
+  final TextEditingController _controladorUser = TextEditingController();
+  final TextEditingController _controladorSenha = TextEditingController();
+
+  String usario = 'admin';
+  String senha = '1234';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.green,
-        body: Padding(
-            padding: EdgeInsets.all(10),
-            child: Center(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  TextFormField(
-                    autofocus: true,
-                    keyboardType: TextInputType.text,
-                    style: new TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: InputDecoration(
-                        labelText: 'Usuário',
-                        labelStyle: TextStyle(color: Colors.white)),
-                  ),
-                  Divider(),
-                  TextFormField(
-                    autofocus: true,
-                    keyboardType: TextInputType.text,
-                    obscureText: true,
-                    style: new TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: InputDecoration(
-                        labelText: 'Senha',
-                        labelStyle: TextStyle(color: Colors.white)),
-                  ),
-                  Divider(),
-                  ButtonTheme(
-                    height: 60.0,
-                    child: ElevatedButton(
-                      onPressed: () => {},
-                      child: Text(
-                        "Entrar",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      style: ElevatedButton.styleFrom(primary: Colors.green),
-                    ),
-                  )
-                ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Entre com sua conta',
+                style: TextStyle(fontSize: 30),
               ),
-            )));
+              TextFormField(
+                controller: _controladorUser,
+                decoration: InputDecoration(
+                    labelText: 'Usuário',
+                    hintText: "Informe seu usuário",
+                    border: OutlineInputBorder()),
+                validator: (value) {
+                  if (RegExp(emailRegex).hasMatch(value!)) {
+                  } else if (value == null || value.isEmpty) {
+                    return "Campo obrigatorio";
+                  } else {
+                    return "email is not correctly formatted";
+                  }
+                },
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextFormField(
+                controller: _controladorSenha,
+                obscureText: true,
+                decoration: InputDecoration(
+                    labelText: 'Senha',
+                    hintText: "Informe sua senha",
+                    border: OutlineInputBorder()),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Campo obrigatorio";
+                  } else {
+                    return null;
+                  }
+                },
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              InkWell(
+                onTap: () {
+                  final String user = _controladorUser.text;
+                  final String senha = _controladorSenha.text;
+
+                  if (user == 'admin' && senha == '1234') {
+                    Navigator.pushNamed(context, '/home');
+                  }
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 30,
+                  decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Center(
+                    child: Text("Entrar"),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
