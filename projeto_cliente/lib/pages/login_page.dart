@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                   ButtonTheme(
                     height: 60.0,
                     child: ElevatedButton(
-                      onPressed: () => {},
+                      onPressed: () => {Navigator.pushNamed(context, "/home")},
                       child: Text(
                         "Entrar",
                         style: TextStyle(color: Colors.white),
