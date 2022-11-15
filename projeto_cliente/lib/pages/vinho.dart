@@ -1,41 +1,34 @@
 import 'package:flutter/material.dart';
 
-class CadastrarProPage extends StatelessWidget {
-  const CadastrarProPage({Key? key}) : super(key: key);
+class VinhoPage extends StatelessWidget {
+  const VinhoPage({Key? key}) : super(key: key);
 
-@override
-Widget build(BuildContext context){
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Cadastrar Produtos'),
-      centerTitle: true,
-    ),
-    body: _listOnline(),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Vinhos'),
+          centerTitle: true,
+        ),
+        body:
+            _listOnline());
+  }
 
   Widget _listOnline() {
     return ListView(
       scrollDirection: Axis.vertical,
-
       children: [
-        const Text(
-          "Produtos cadastrados: ",
-        style: TextStyle(
-          fontSize: 30,),
-            textAlign: TextAlign.center
-        ),
         Column(
           /* Item 1 */
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                padding: EdgeInsets.only(left: 22),
-                width: 1000,
-                height: 62,
-                decoration: BoxDecoration(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         width: 2,
@@ -56,14 +49,14 @@ Widget build(BuildContext context){
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
-                child: (
-                    Text("Monster Energy Ultra Paradise 473ml\n"
-                        "  RS 9,10",
-                        style: TextStyle(
-                          fontSize: 18,
-                        )
-                    )
-                )
+              child: (
+                  Text("Pérgola Tinto Suave 1l\n"
+                      "  RS 19,90",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )
+              )
+              )
             ),
           ],
         ),
@@ -99,8 +92,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Monster Mango Loco 473ml\n"
-                  "  RS 10,07",
+              child: Text("Chalice Branco Suave 750ml\n"
+                          "  RS 17,80",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -139,8 +132,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Monster Ultra Lata 473ml\n"
-                  "  RS 10,00",
+              child: Text("Saint Germain Assemblage 750ml\n"
+                  "  RS 24,59",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -179,8 +172,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("TNT Focus 473ml\n"
-                  "  RS 7,99",
+              child: Text("Campo Largo Tinto Seco 750ml\n"
+                  "  RS 14,20",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -219,8 +212,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("TNT Citrus 269ml\n"
-                  "  RS 5,90",
+              child: Text("Santa Carolina Reservado Rosé 750ml\n"
+                  "  RS 35,00",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -259,8 +252,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Red Bull 473ml\n"
-                  "  RS 7,19",
+              child: Text("1865 Vineyard Cabernet Sauvignon 750ml\n"
+                  "  RS 113,91",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -299,8 +292,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Red Bull Sugar Free 250ml\n"
-                  "  RS 6,50",
+              child: Text("Olaria Tinto Suave 750ml\n"
+                  "  RS 48,00",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -339,8 +332,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Baily Melancia 473ml\n"
-                  "  RS 5,81",
+              child: Text("Casal Garcia Branco 750ml\n"
+                  "  RS 59,90",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -379,8 +372,8 @@ Widget build(BuildContext context){
                 borderRadius: BorderRadius.circular(6.0),
               ),
 
-              child: Text("Baily Tropical 473ml\n"
-                  "  RS 5,81",
+              child: Text("Tavernello Rosso d'Italia\n"
+                          "  RS 29,90",
                   style: TextStyle(
                     fontSize: 18,
                   )),

@@ -1,41 +1,34 @@
 import 'package:flutter/material.dart';
 
-class CadastrarProPage extends StatelessWidget {
-  const CadastrarProPage({Key? key}) : super(key: key);
+class EnergeticoPage extends StatelessWidget {
+  const EnergeticoPage({Key? key}) : super(key: key);
 
-@override
-Widget build(BuildContext context){
-  return Scaffold(
-    appBar: AppBar(
-      title: const Text('Cadastrar Produtos'),
-      centerTitle: true,
-    ),
-    body: _listOnline(),
-  );
-}
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Energeticos'),
+          centerTitle: true,
+        ),
+        body:
+            _listOnline());
+  }
 
   Widget _listOnline() {
     return ListView(
       scrollDirection: Axis.vertical,
-
       children: [
-        const Text(
-          "Produtos cadastrados: ",
-        style: TextStyle(
-          fontSize: 30,),
-            textAlign: TextAlign.center
-        ),
         Column(
           /* Item 1 */
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                padding: EdgeInsets.only(left: 22),
-                width: 1000,
-                height: 62,
-                decoration: BoxDecoration(
+              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+              padding: EdgeInsets.only(left: 22),
+              width: 1000,
+              height: 62,
+              decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         width: 2,
@@ -56,14 +49,14 @@ Widget build(BuildContext context){
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
-                child: (
-                    Text("Monster Energy Ultra Paradise 473ml\n"
-                        "  RS 9,10",
-                        style: TextStyle(
-                          fontSize: 18,
-                        )
-                    )
-                )
+              child: (
+                  Text("Monster Energy Ultra Paradise 473ml\n"
+                      "  RS 9,10",
+                  style: TextStyle(
+                    fontSize: 18,
+                  )
+              )
+              )
             ),
           ],
         ),
@@ -100,7 +93,7 @@ Widget build(BuildContext context){
               ),
 
               child: Text("Monster Mango Loco 473ml\n"
-                  "  RS 10,07",
+                          "  RS 10,07",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -380,7 +373,7 @@ Widget build(BuildContext context){
               ),
 
               child: Text("Baily Tropical 473ml\n"
-                  "  RS 5,81",
+                          "  RS 5,81",
                   style: TextStyle(
                     fontSize: 18,
                   )),
