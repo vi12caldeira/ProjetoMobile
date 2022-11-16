@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CervejaPage extends StatelessWidget {
@@ -11,8 +10,7 @@ class CervejaPage extends StatelessWidget {
           title: const Text('Cervejas'),
           centerTitle: true,
         ),
-        body:
-            _listOnline());
+        body: _listOnline());
   }
 
   Widget _listOnline() {
@@ -25,11 +23,11 @@ class CervejaPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              padding: EdgeInsets.only(left: 22),
-              width: 1000,
-              height: 62,
-              decoration: BoxDecoration(
+                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                padding: EdgeInsets.only(left: 22),
+                width: 1000,
+                height: 62,
+                decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         width: 2,
@@ -50,15 +48,12 @@ class CervejaPage extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
-              child: (
-                  Text("Skol 473ml\n"
-                      "  RS 3,98",
-                  style: TextStyle(
-                    fontSize: 18,
-                  )
-              )
-              )
-            ),
+                child: (Text(
+                    "Skol 473ml\n"
+                    "  RS 3,98",
+                    style: TextStyle(
+                      fontSize: 18,
+                    )))),
           ],
         ),
         Column(
@@ -92,9 +87,9 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Skol 269ml\n"
-                          "  RS 2,45",
+              child: Text(
+                  "Skol 269ml\n"
+                  "  RS 2,45",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -132,8 +127,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Skol 350ml\n"
+              child: Text(
+                  "Skol 350ml\n"
                   "  RS 3,20",
                   style: TextStyle(
                     fontSize: 18,
@@ -172,8 +167,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Brahma 473ml\n"
+              child: Text(
+                  "Brahma 473ml\n"
                   "  RS 4,00",
                   style: TextStyle(
                     fontSize: 18,
@@ -212,8 +207,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Brahma Duplo Malte\n"
+              child: Text(
+                  "Brahma Duplo Malte\n"
                   "  RS 4,00",
                   style: TextStyle(
                     fontSize: 18,
@@ -252,8 +247,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Lokal 473ml\n"
+              child: Text(
+                  "Lokal 473ml\n"
                   "  RS 2,95",
                   style: TextStyle(
                     fontSize: 18,
@@ -292,8 +287,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Império 350ml\n"
+              child: Text(
+                  "Império 350ml\n"
                   "  RS 3,75",
                   style: TextStyle(
                     fontSize: 18,
@@ -332,8 +327,8 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Heineken 650ml\n"
+              child: Text(
+                  "Heineken 650ml\n"
                   "  RS 10,00",
                   style: TextStyle(
                     fontSize: 18,
@@ -372,18 +367,16 @@ class CervejaPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Heineken 350ml\n"
-                          "  RS 5,90",
+              child: Text(
+                  "Heineken 350ml\n"
+                  "  RS 5,90",
                   style: TextStyle(
                     fontSize: 18,
                   )),
             ),
           ],
         ),
-
       ],
     );
   }
 }
-

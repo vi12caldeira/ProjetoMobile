@@ -10,8 +10,7 @@ class EnergeticoPage extends StatelessWidget {
           title: const Text('Energeticos'),
           centerTitle: true,
         ),
-        body:
-            _listOnline());
+        body: _listOnline());
   }
 
   Widget _listOnline() {
@@ -24,11 +23,11 @@ class EnergeticoPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              padding: EdgeInsets.only(left: 22),
-              width: 1000,
-              height: 62,
-              decoration: BoxDecoration(
+                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                padding: EdgeInsets.only(left: 22),
+                width: 1000,
+                height: 62,
+                decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         width: 2,
@@ -49,15 +48,12 @@ class EnergeticoPage extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
-              child: (
-                  Text("Monster Energy Ultra Paradise 473ml\n"
-                      "  RS 9,10",
-                  style: TextStyle(
-                    fontSize: 18,
-                  )
-              )
-              )
-            ),
+                child: (Text(
+                    "Monster Energy Ultra Paradise 473ml\n"
+                    "  RS 9,10",
+                    style: TextStyle(
+                      fontSize: 18,
+                    )))),
           ],
         ),
         Column(
@@ -91,9 +87,9 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Monster Mango Loco 473ml\n"
-                          "  RS 10,07",
+              child: Text(
+                  "Monster Mango Loco 473ml\n"
+                  "  RS 10,07",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -131,8 +127,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Monster Ultra Lata 473ml\n"
+              child: Text(
+                  "Monster Ultra Lata 473ml\n"
                   "  RS 10,00",
                   style: TextStyle(
                     fontSize: 18,
@@ -171,8 +167,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("TNT Focus 473ml\n"
+              child: Text(
+                  "TNT Focus 473ml\n"
                   "  RS 7,99",
                   style: TextStyle(
                     fontSize: 18,
@@ -211,8 +207,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("TNT Citrus 269ml\n"
+              child: Text(
+                  "TNT Citrus 269ml\n"
                   "  RS 5,90",
                   style: TextStyle(
                     fontSize: 18,
@@ -251,8 +247,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Red Bull 473ml\n"
+              child: Text(
+                  "Red Bull 473ml\n"
                   "  RS 7,19",
                   style: TextStyle(
                     fontSize: 18,
@@ -291,8 +287,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Red Bull Sugar Free 250ml\n"
+              child: Text(
+                  "Red Bull Sugar Free 250ml\n"
                   "  RS 6,50",
                   style: TextStyle(
                     fontSize: 18,
@@ -331,8 +327,8 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Baily Melancia 473ml\n"
+              child: Text(
+                  "Baily Melancia 473ml\n"
                   "  RS 5,81",
                   style: TextStyle(
                     fontSize: 18,
@@ -371,16 +367,15 @@ class EnergeticoPage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Baily Tropical 473ml\n"
-                          "  RS 5,81",
+              child: Text(
+                  "Baily Tropical 473ml\n"
+                  "  RS 5,81",
                   style: TextStyle(
                     fontSize: 18,
                   )),
             ),
           ],
         ),
-
       ],
     );
   }

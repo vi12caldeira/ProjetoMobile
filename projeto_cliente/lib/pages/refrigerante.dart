@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class RefrigerantePage extends StatelessWidget {
@@ -11,8 +10,7 @@ class RefrigerantePage extends StatelessWidget {
           title: const Text('Refrigerantes'),
           centerTitle: true,
         ),
-        body:
-            _listOnline());
+        body: _listOnline());
   }
 
   Widget _listOnline() {
@@ -25,11 +23,11 @@ class RefrigerantePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-              padding: EdgeInsets.only(left: 22),
-              width: 1000,
-              height: 62,
-              decoration: BoxDecoration(
+                margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                padding: EdgeInsets.only(left: 22),
+                width: 1000,
+                height: 62,
+                decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(
                         width: 2,
@@ -50,16 +48,13 @@ class RefrigerantePage extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(6.0),
                 ),
-              child: (
-                  Text("Sukita uva\n"
-                      "  RS 3,50",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: 'Montserrat',
-                  )
-              )
-              )
-            ),
+                child: (Text(
+                    "Sukita uva\n"
+                    "  RS 3,50",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'Montserrat',
+                    )))),
           ],
         ),
         Column(
@@ -93,9 +88,9 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Sukita laranja\n"
-                          "  RS 3,50",
+              child: Text(
+                  "Sukita laranja\n"
+                  "  RS 3,50",
                   style: TextStyle(
                     fontSize: 18,
                   )),
@@ -133,8 +128,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Guarana 2l\n"
+              child: Text(
+                  "Guarana 2l\n"
                   "  RS 5,98",
                   style: TextStyle(
                     fontSize: 18,
@@ -173,8 +168,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Guarana 1,5l\n"
+              child: Text(
+                  "Guarana 1,5l\n"
                   "  RS 3,98",
                   style: TextStyle(
                     fontSize: 18,
@@ -213,8 +208,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Coca cola 2l\n"
+              child: Text(
+                  "Coca cola 2l\n"
                   "  RS 8,90",
                   style: TextStyle(
                     fontSize: 18,
@@ -253,8 +248,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Coca-cola 1,5l\n"
+              child: Text(
+                  "Coca-cola 1,5l\n"
                   "  RS 5,98",
                   style: TextStyle(
                     fontSize: 18,
@@ -293,8 +288,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Guarapan 2l\n"
+              child: Text(
+                  "Guarapan 2l\n"
                   "  RS 4,60",
                   style: TextStyle(
                     fontSize: 18,
@@ -333,8 +328,8 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Fanta laranja\n"
+              child: Text(
+                  "Fanta laranja\n"
                   "  RS 6,00",
                   style: TextStyle(
                     fontSize: 18,
@@ -373,9 +368,9 @@ class RefrigerantePage extends StatelessWidget {
                 ),
                 borderRadius: BorderRadius.circular(6.0),
               ),
-
-              child: Text("Fanta Uva\n"
-                          "  RS 6,00",
+              child: Text(
+                  "Fanta Uva\n"
+                  "  RS 6,00",
                   style: TextStyle(
                     fontSize: 18,
                   )),
