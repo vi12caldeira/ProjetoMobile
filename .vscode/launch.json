@@ -1,0 +1,88 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "projeto_cliente",
+            "cwd": "projeto_cliente",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "projeto_cliente (profile mode)",
+            "cwd": "projeto_cliente",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "projeto_cliente (release mode)",
+            "cwd": "projeto_cliente",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "projeto_loja",
+            "cwd": "projeto_loja",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "projeto_loja (profile mode)",
+            "cwd": "projeto_loja",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "projeto_loja (release mode)",
+            "cwd": "projeto_loja",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "projeto_cliente",
+            "cwd": "ProjetoMobile\\projeto_cliente",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "projeto_cliente (profile mode)",
+            "cwd": "ProjetoMobile\\projeto_cliente",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "projeto_cliente (release mode)",
+            "cwd": "ProjetoMobile\\projeto_cliente",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "projeto_loja",
+            "cwd": "ProjetoMobile\\projeto_loja",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "projeto_loja (profile mode)",
+            "cwd": "ProjetoMobile\\projeto_loja",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "projeto_loja (release mode)",
+            "cwd": "ProjetoMobile\\projeto_loja",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

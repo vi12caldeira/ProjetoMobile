@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:navegacao_drawer/pages/login_page.dart';
 import 'package:navegacao_drawer/pages/pedidos_page.dart';
@@ -11,6 +13,9 @@ import 'pages/home_page.dart';
 import 'pages/refrigerante.dart';
 import 'pages/suco.dart';
 import 'pages/vinho.dart';
+import 'pages/bebidas_do_ze.dart';
+import 'pages/butequin_do_carlos.dart';
+import 'pages/disk_bebidas.dart';
 
 Map<String, WidgetBuilder> routes() {
   return {
@@ -25,5 +30,8 @@ Map<String, WidgetBuilder> routes() {
     '/suco': (context) => SucosPage(),
     '/energetico': (context) => EnergeticoPage(),
     '/espumante': (context) => EspumantesPage(),
+    '/pedidos1' : (context) => BebidasZePage(),
+    '/pedidos2' : (context) => ButequinCarlosPage(),
+    '/pedidos3' : (context) => DiskBebidasPage(),
   };
 }

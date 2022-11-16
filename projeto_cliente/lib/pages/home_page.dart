@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,12 +11,14 @@ class HomePage extends StatelessWidget {
         title: const Text('Distribuidora'),
         centerTitle: true,
       ),
-      body: Column(
+      body:
+      Column(
+
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton.icon(
+              ElevatedButton.icon( //refrigerante
                 label: const Text('Refrigerante'),
                 icon: Icon(Icons.fastfood),
                 onPressed: () {
@@ -25,10 +28,9 @@ class HomePage extends StatelessWidget {
                     primary: Colors.grey,
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     textStyle: TextStyle(
-                      fontSize: 15,
-                    )),
+                        fontSize: 15,)),
               ),
-              ElevatedButton.icon(
+              ElevatedButton.icon( // cerveja
                 label: const Text('Cervejas'),
                 icon: Icon(Icons.fastfood),
                 onPressed: () {
@@ -38,40 +40,29 @@ class HomePage extends StatelessWidget {
                     primary: Colors.grey,
                     padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                     textStyle: TextStyle(
-                      fontSize: 15,
-                    )),
+                      fontSize: 15,)),
               ),
-              ElevatedButton.icon(
-                label: const Text('Vinhos'),
-                icon: Icon(Icons.local_bar),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/vinho");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                    textStyle: TextStyle(fontSize: 15)),
-              ),
+            
             ],
           ),
           SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton.icon(
-                label: const Text('Energetico'),
-                icon: Icon(Icons.fastfood_outlined),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/energetico");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                    textStyle: TextStyle(
-                      fontSize: 15,
-                    )),
-              ),
-              ElevatedButton.icon(
+              ElevatedButton.icon( //energetico
+              label: const Text('Energetico'),
+              icon: Icon(Icons.fastfood_outlined),
+              onPressed: () {
+                Navigator.pushNamed(context, "/energetico");
+              },
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.grey,
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  textStyle: TextStyle(
+                    fontSize: 15,
+                  )
+               ),),
+              ElevatedButton.icon( //espumantes
                 label: const Text('Espumantes'),
                 icon: Icon(Icons.fastfood_sharp),
                 onPressed: () {
@@ -81,10 +72,28 @@ class HomePage extends StatelessWidget {
                     primary: Colors.grey,
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                     textStyle: TextStyle(
-                      fontSize: 15,
-                    )),
+                      fontSize: 15,)),
               ),
-              ElevatedButton.icon(
+              
+            ],
+          ),
+          SizedBox(height: 25),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton.icon( //vinhos
+                label: const Text('Vinhos'),
+                icon: Icon(Icons.local_bar),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/vinho");
+                },
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.grey,
+                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    textStyle: TextStyle(
+                      fontSize: 15)),
+              ),
+              ElevatedButton.icon( //suco
                 label: const Text('Sucos'),
                 icon: Icon(Icons.local_drink),
                 onPressed: () {
@@ -94,8 +103,7 @@ class HomePage extends StatelessWidget {
                     primary: Colors.grey,
                     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
                     textStyle: TextStyle(
-                      fontSize: 15,
-                    )),
+                      fontSize: 15,)),
               ),
             ],
           ),
@@ -108,14 +116,14 @@ class HomePage extends StatelessWidget {
               ),
               child: Text(
                 "\n \n \n \n \n"
-                "Últimas compras:\n",
+                    "Últimas compras:\n",
                 style: TextStyle(color: Colors.black, fontSize: 18),
                 textAlign: TextAlign.center,
               ),
             ),
           ]),
-          Row(
-            /* Item 1 */
+          Row(/* Item 1 */
+            
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -124,18 +132,73 @@ class HomePage extends StatelessWidget {
                     '   09/11/2022'),
                 icon: Icon(Icons.baby_changing_station_sharp),
                 onPressed: () {
-                  Navigator.pushNamed(context, "/refrigerante");
+                  Navigator.pushNamed(context, "/pedidos1");
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Colors.grey,
-                    //padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    padding: EdgeInsets.symmetric(horizontal: 25, /*vertical: 15*/),
                     textStyle: TextStyle(
                       fontSize: 15,)),
-              /*Container(
+              ),
+            ],
+          ),
+          SizedBox(height: 25),
+          Row( /* Item 2 */
+           
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ElevatedButton.icon(
+                label: const Text('Butequin do Carlos\n'
+                    '   29/10/2022'),
+                icon: Icon(Icons.baby_changing_station_sharp),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/pedidos2");
+                },
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.grey,
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    textStyle: TextStyle(
+                      fontSize: 15,)),
+              ),
+            ],
+          ),
+          SizedBox(height: 25),
+          Row( /* Item 3 */
+           
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ElevatedButton.icon(
+                label: const Text('Disk Bebidas\n'
+                    '   25/10/2022'),
+                icon: Icon(Icons.baby_changing_station_sharp),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/pedidos3");
+                },
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.grey,
+                    padding: EdgeInsets.symmetric(horizontal: 42),
+                    textStyle: TextStyle(
+                      fontSize: 15,)),
+              ),
+            ],
+          ),
+          
+        ],
+      ),
+
+          /*
+          Column(
+            /* Item 1 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                   margin: EdgeInsets.only(left: 10, top: 10, right: 10),
                   padding: EdgeInsets.only(left: 22),
                   width: 1000,
-                  height: 55,
+                  height: 40,
                   decoration: BoxDecoration(
                     border: Border(
                       top: BorderSide(
@@ -158,8 +221,7 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6.0),
                   ),
                   child: (
-                      Text("Bebidas do seu Zé\n"
-                        "   09/11/2022"  ,
+                      Text("Bebidas do seu Zé\n",
 
                           style: TextStyle(
                             fontSize: 18,
@@ -172,11 +234,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
           Column(
-<<<<<<< HEAD
-            /* Item 1 */
-=======
-            /* Item 2 */
->>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -184,7 +241,7 @@ class HomePage extends StatelessWidget {
                   margin: EdgeInsets.only(left: 10, top: 10, right: 10),
                   padding: EdgeInsets.only(left: 22),
                   width: 1000,
-                  height:55,
+                  height: 40,
                   decoration: BoxDecoration(
                     border: Border(
                       top: BorderSide(
@@ -217,8 +274,6 @@ class HomePage extends StatelessWidget {
                       )
                   )
               ),
-<<<<<<< HEAD
-=======
 
             ],
           ),
@@ -266,68 +321,8 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Row(children: [
-            Container(
-              width: 180,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Text(
-                "\n \n"
-                    "Lojas:\n",
-                style: TextStyle(color: Colors.black, fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ]),
-          Column(
-            /* Item 1 */
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Distribuidora José\n"
-                        ,
-
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
->>>>>>> 7a19ff6f062e15ed92e7029373b0f1d731cc6c1f
-            ],
-          ),
         ],
-      ),
+      ),*/
 
 
 
@@ -397,4 +392,7 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+
+
 }

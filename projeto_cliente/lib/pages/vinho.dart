@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> login_page
 import 'package:flutter/material.dart';
 
 class VinhoPage extends StatelessWidget {
@@ -383,8 +380,4 @@ class VinhoPage extends StatelessWidget {
       ],
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> login_page
