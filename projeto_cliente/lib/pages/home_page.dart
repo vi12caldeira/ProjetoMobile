@@ -113,6 +113,158 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ]),
+          Row(
+            /* Item 1 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ElevatedButton.icon(
+                label: const Text('Bebidas do seu Zé\n'
+                    '   09/11/2022'),
+                icon: Icon(Icons.baby_changing_station_sharp),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/refrigerante");
+                },
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.grey,
+                    //padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    textStyle: TextStyle(
+                      fontSize: 15,)),
+              /*Container(
+                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                  padding: EdgeInsets.only(left: 22),
+                  width: 1000,
+                  height: 55,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      bottom: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      left: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //Borderside
+                      right: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                    ),
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                  child: (
+                      Text("Bebidas do seu Zé\n"
+                        "   09/11/2022"  ,
+
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Montserrat',
+                          ),
+                          //textAlign: TextAlign.center,
+                      )
+                  )*/
+              ),
+            ],
+          ),
+          Column(
+            /* Item 2 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                  padding: EdgeInsets.only(left: 22),
+                  width: 1000,
+                  height:55,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      bottom: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      left: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //Borderside
+                      right: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                    ),
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                  child: (
+                      Text("Butequin do Carlos\n"
+                        "   29/10/2022",
+
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontFamily: 'Montserrat',
+                        ),
+                        //textAlign: TextAlign.center,
+                      )
+                  )
+              ),
+
+            ],
+          ),
+          Column(
+            /* Item 3 */
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
+                  padding: EdgeInsets.only(left: 22),
+                  width: 1000,
+                  height: 55,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      bottom: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                      left: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //Borderside
+                      right: BorderSide(
+                          width: 1,
+                          color: Colors.black12,
+                          style: BorderStyle.solid), //BorderSide
+                    ),
+                    borderRadius: BorderRadius.circular(6.0),
+                  ),
+                  child: (
+                      Text("Disk Bebidas\n"
+                        "   25/10/2022",
+
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontFamily: 'Montserrat',
+                        ),
+                        //textAlign: TextAlign.center,
+                      )
+                  )
+              ),
+            ],
+          ),
+        ],
+      ),
+
+          /*
           Column(
             /* Item 1 */
             mainAxisAlignment: MainAxisAlignment.start,
@@ -245,67 +397,8 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          Row(children: [
-            Container(
-              width: 180,
-              height: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Text(
-                "\n \n"
-                    "Lojas:\n",
-                style: TextStyle(color: Colors.black, fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ]),
-          Column(
-            /* Item 1 */
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Distribuidora José\n"
-                        ,
-
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-            ],
-          ),
         ],
-      ),
+      ),*/
 
 
 
