@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navegacao_drawer/models/user.dart';
+import 'package:navegacao_drawer/repository/userDAO.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -12,11 +14,22 @@ class _LoginPageState extends State<LoginPage> {
   static const emailRegex =
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
 
+  UserDAO db = UserDAO();
+
   final TextEditingController _controladorUser = TextEditingController();
   final TextEditingController _controladorSenha = TextEditingController();
 
-  String usario = 'admin';
-  String senha = '1234';
+   @override
+  void initState() {
+    super.initState();
+    User igor = User(1, 'iguin', '123456');
+    User vinicius = User(2, 'vinicin', '987654');
+    User vitoria = User(3, 'vitoria', '00000');
+   
+    db.insertUser(igor);
+    db.insertUser(vinicius);
+    db.insertUser(vitoria);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,13 +82,15 @@ class _LoginPageState extends State<LoginPage> {
                 height: 10,
               ),
               InkWell(
-                onTap: () {
+                onTap: () async {
                   final String user = _controladorUser.text;
                   final String senha = _controladorSenha.text;
+                  User currentUser = new User(0, user, senha);
 
-                  if (user == 'admin' && senha == '1234') {
-                    Navigator.pushNamed(context, '/home');
-                  }
+                 User? usuario = await db.getUser(user);
+                if(usuario != null && usuario.autenticar(currentUser)){
+                  Navigator.pushNamed(context, '/home');
+                }
                 },
                 child: Container(
                   width: double.infinity,

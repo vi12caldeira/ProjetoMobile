@@ -10,6 +10,8 @@ class ProdutoDao {
   static ProdutoDao? _produtoDao;
   static Database? _database;
   ProdutoDao._createInstance();
+
+  
   factory ProdutoDao() {
     if (_produtoDao == null) _produtoDao = ProdutoDao._createInstance();
     return _produtoDao!;

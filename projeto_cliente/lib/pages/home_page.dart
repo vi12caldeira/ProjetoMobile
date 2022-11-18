@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   List<Produto> _listaProdutos = [];
 
   @override
-  void initState() async {
+  void initState() {
     super.initState();
     Produto p1 = Produto(1, 'Água mineral com gás', 1.5, 10);
     Produto p2 = Produto(2, 'Coca cola 600ml', 5.5, 20);
@@ -30,15 +30,15 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         _listaProdutos = lista;
       });
-    });    
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-        itemCount: _listaProdutos.length,
-        itemBuilder: (context, index){
+          itemCount: _listaProdutos.length,
+          itemBuilder: (context, index) {
             return ListTile(
               leading: Icon(
                 Icons.check_circle_outline_rounded,
@@ -46,12 +46,12 @@ class _HomePageState extends State<HomePage> {
                 size: 25,
               ),
               title: Text(_listaProdutos[index].nome!),
-              subtitle: Text('R\$${_listaProdutos[index].preco!.toStringAsFixed(2)}'),
+              subtitle:
+                  Text('R\$${_listaProdutos[index].preco!.toStringAsFixed(2)}'),
               trailing: Icon(Icons.arrow_forward),
-              onTap: (){},
+              onTap: () {},
             );
-        }
-      ),
+          }),
     );
   }
 }
