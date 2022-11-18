@@ -1,19 +1,18 @@
 import 'dart:io';
 
-import 'package:navegacao_drawer/models/produto.dart';
+import 'package:navegacao_drawer/models/categoria.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
-// ATENÇÃO: fazer o import de produto.dart
-class ProdutoDao {
-  static ProdutoDao? _produtoDao;
+class CategoriaDAO {
+  static CategoriaDAO? _categoriaDAO;
   static Database? _database;
-  ProdutoDao._createInstance();
+  CategoriaDAO._createInstance();
 
-  factory ProdutoDao() {
-    if (_produtoDao == null) _produtoDao = ProdutoDao._createInstance();
-    return _produtoDao!;
+  factory CategoriaDAO() {
+    if (_categoriaDAO == null) _categoriaDAO = CategoriaDAO._createInstance();
+    return _categoriaDAO!;
   }
   Future<Database> get database async {
     if (_database == null) _database = await initializeDatabase();
@@ -24,76 +23,72 @@ class ProdutoDao {
     String _databaseName = 'projeto.db';
     Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path, _databaseName);
-    var produtosDatabase =
+    var categoriaDatabase =
         await openDatabase(path, version: 1, onCreate: _createDb);
-    return produtosDatabase;
+    return categoriaDatabase;
   }
 
   void _createDb(Database db, int newVersion) async {
-    await db.execute("CREATE TABLE produtos ("
+    await db.execute("CREATE TABLE categoria ("
         "id INTEGER PRIMARY KEY AUTOINCREMENT,"
         "nome TEXT,"
-        "preco REAL,"
-        "quantidade INTEGER"
-        "id_categoria"
-        "FOREIGN KEY (id_categoria) REFERENCES categoria (id)"
         ")");
   }
 
   void dropTable() async {
     Database db = await database;
-    await db.execute("DROP TABLE produtos");
+    await db.execute("DROP TABLE categoria");
   }
 
-  Future<int> insertProduto(Produto produto) async {
+  Future<int> insertCategoria(Categoria categoria) async {
     Database db = await database;
     var resultado = await db.insert(
-      'produtos',
-      produto.toMap(),
+      'categoria',
+      categoria.toMap(),
       conflictAlgorithm: ConflictAlgorithm.ignore,
     );
     return resultado;
   }
 
-  Future<List<Produto>> getProdutos() async {
+  Future<List<Categoria>> getCategorias() async {
     Database db = await database;
-    var resultado = await db.query('produtos');
-    List<Produto> lista = resultado.isNotEmpty
-        ? resultado.map((item) => Produto.fromMap(item)).toList()
+    var resultado = await db.query('categoria');
+    List<Categoria> lista = resultado.isNotEmpty
+        ? resultado.map((item) => Categoria.fromMap(item)).toList()
         : [];
     return lista;
   }
 
-  Future<Produto?> getProduto(int id) async {
+  Future<Categoria?> getCategoria(int id) async {
     Database db = await database;
     List maps = await db.query(
-      'produtos',
-      columns: ['id', 'nome', 'preco', 'quantidade'],
+      'categoria',
+      columns: ['id', 'nome'],
       where: "id = ?",
       whereArgs: [id],
     );
     if (maps.isNotEmpty) {
-      return Produto.fromMap(maps.first);
+      return Categoria.fromMap(maps.first);
     } else {
       return null;
     }
   }
 
-  Future<int> updateProduto(Produto produto) async {
+  Future<int> updateCategoria(Categoria categoria) async {
     var db = await database;
     int resultado = await db.update(
-      'produtos',
-      produto.toMap(),
+      'categoria',
+      categoria.toMap(),
       where: "id = ?",
-      whereArgs: [produto.id],
+      whereArgs: [categoria.id],
     );
     return resultado;
   }
 
-  Future<int> deleteProduto(int id) async {
+  Future<int> deleteCategoria(int id) async {
     var db = await database;
     int resultado = await db.delete(
-      'produtos',
+      'categoria',
       where: "id = ?",
       whereArgs: [id],
     );
@@ -103,7 +98,7 @@ class ProdutoDao {
   Future<int> getCount() async {
     Database db = await database;
     List<Map<String, dynamic>> list =
-        await db.rawQuery('SELECT COUNT (*) from produtos');
+        await db.rawQuery('SELECT COUNT (*) from categoria');
     int? resultado = Sqflite.firstIntValue(list);
     return resultado!;
   }

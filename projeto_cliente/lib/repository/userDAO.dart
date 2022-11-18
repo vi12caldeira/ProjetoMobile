@@ -1,20 +1,18 @@
-import 'package:navegacao_drawer/models/user.dart';
-
-
 import 'dart:io';
+
+import 'package:navegacao_drawer/models/user.dart';
+import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
 
-class UserDAO{
+class UserDAO {
   static UserDAO? _userDAO;
   static Database? _database;
   UserDAO._createInstance();
 
-  
   factory UserDAO() {
-    if ( _userDAO == null) _userDAO = UserDAO._createInstance();
-    return  _userDAO!;
+    if (_userDAO == null) _userDAO = UserDAO._createInstance();
+    return _userDAO!;
   }
 
   Future<Database> get database async {
@@ -23,15 +21,15 @@ class UserDAO{
   }
 
   Future<Database> initializeDatabase() async {
-      String _databaseName = 'user.db';
-      Directory directory = await getApplicationDocumentsDirectory();
-      String path = join(directory.path, _databaseName);
-      var produtosDatabase =
-      await openDatabase(path, version: 1, onCreate: _createDb);
-      return produtosDatabase;
- }
+    String _databaseName = 'projeto.db';
+    Directory directory = await getApplicationDocumentsDirectory();
+    String path = join(directory.path, _databaseName);
+    var produtosDatabase =
+        await openDatabase(path, version: 1, onCreate: _createDb);
+    return produtosDatabase;
+  }
 
- void _createDb(Database db, int newVersion) async {
+  void _createDb(Database db, int newVersion) async {
     await db.execute("CREATE TABLE user ("
         "id INTEGER PRIMARY KEY AUTOINCREMENT,"
         "username TEXT,"
@@ -39,7 +37,7 @@ class UserDAO{
         ")");
   }
 
-   void dropTable() async {
+  void dropTable() async {
     Database db = await database;
     await db.execute("DROP TABLE user");
   }
@@ -68,5 +66,4 @@ class UserDAO{
       return null;
     }
   }
-  
 }
