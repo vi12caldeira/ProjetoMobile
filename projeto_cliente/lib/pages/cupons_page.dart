@@ -39,13 +39,7 @@ class CuponsPage extends StatelessWidget {
               child: Text(
                 "Cupom de final de semana\n"
                 "\nResgate seu cupom e ganhe \n20% de desconto"
-                "\n"
-                "\n"
-                "\n"
-                "\n"
-                "\n"
-                "\n"
-                "\n"
+                "\n \n \n \n \n \n \n"
                 "Promoção válida somente para \nas lojas participantes:\n"
                 "      Bar do Zé\n"
                 "      Cantin da cachaça\n"
@@ -81,9 +75,16 @@ class CuponsPage extends StatelessWidget {
               ),
               child: Text(
                 " Cupom para curtir com a familia\n"
-                "\n  Esse cupom é para você que quer \n  curtir o feriadão com a familia\n"
-                "\n  Resgate agora um super cupom para \n  ter desconto de R 50,00 em compras!!"
-                "\n \n \n",
+                "\n  Esse cupom é para você que \nquer curtir o feriadão com a familia\n"
+                "\n  Resgate agora um super cupom \npara ter desconto de R 50,00 \nem compras!!"
+                "\n \n \n \n"
+                "Promoção válida somente para \nas lojas participantes:\n"
+                "      Bar do Zé\n"
+                "      Butiquin do Carlos\n"
+                "      Distribuidora Sha\n"
+                "      Disk bebidas\n"
+                "      Bar da Carla\n"
+                "Obs.: Válido somente para \ncompras acima de R 60,00",
                 style: TextStyle(color: Colors.black, fontSize: 18),
               ),
             ),
