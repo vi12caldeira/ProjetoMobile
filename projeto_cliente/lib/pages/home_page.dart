@@ -9,30 +9,28 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Distribuidora - Cliente'),
+        centerTitle: true,
+        ),
       body:
       Column(
         
         children: [
-          Row(
+          Column(
             
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                width: 10,
-                child: Text("Produtos: ",
-                  textAlign: TextAlign.left,
-                
-                
-              ),),
-              
+              Text("Produtos:",
+                style: TextStyle(color: Colors.black, fontSize: 21),),
               ElevatedButton.icon( //refrigerante
-                label: const Text('Refrigerante'),
+                label: const Text('Produtos'),
                 icon: Icon(Icons.fastfood),
                 onPressed: () {
                   Navigator.pushNamed(context, "/refrigerante");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
+                    primary: Color.fromARGB(234, 133, 42, 128),
                      elevation: 15,
                     //padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                     textStyle: TextStyle(
@@ -50,8 +48,8 @@ class HomePage extends StatelessWidget {
               ),
               child: Text(
                 
-                    "Últimas compras:\n",
-                style: TextStyle(color: Colors.black, fontSize: 18),
+                    "Últimas compras:",
+                style: TextStyle(color: Colors.black, fontSize: 21),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -69,8 +67,8 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos1");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 25, /*vertical: 15*/),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 10, /*vertical: 15*/),
                     textStyle: TextStyle(
                       fontSize: 15,)),
               ),
@@ -90,8 +88,8 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos2");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     textStyle: TextStyle(
                       fontSize: 15,)),
               ),
@@ -111,8 +109,8 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos3");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 42),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
                     textStyle: TextStyle(
                       fontSize: 15,)),
               ),
@@ -121,215 +119,18 @@ class HomePage extends StatelessWidget {
           
         ],
       ),
-      
-/*class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  ProdutoDao db = ProdutoDao();
-  List<Produto> _listaProdutos = [];
-
-  @override
-  void initState() {
-    super.initState();
-    Produto p1 = Produto(1, 'Água mineral com gás', 1.5, 10);
-    Produto p2 = Produto(2, 'Coca cola 600ml', 5.5, 20);
-    Produto p3 = Produto(3, 'Redbull', 6.5, 5);
-    Produto p4 = Produto(4, 'Hamburguer Zoin', 6.5, 5);
-    Produto p5 = Produto(5, 'Pão de queijo', 6.5, 5);
-    db.insertProduto(p1);
-    db.insertProduto(p2);
-    db.insertProduto(p3);
-    db.insertProduto(p4);
-    db.insertProduto(p5);
-    db.getProdutos().then((lista) {
-      setState(() {
-        _listaProdutos = lista;
-      });
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text ('Distribuidora'),
-        centerTitle: true,
-      ),
-      body: 
-      Column(children: [
-        ListView.builder(
-          itemCount: _listaProdutos.length,
-          itemBuilder: (context, index) {
-            return ListTile(
-              leading: Icon(
-                Icons.check_circle_outline_rounded,
-                color: Colors.green,
-                size: 25,
-              ),
-              title: Text(_listaProdutos[index].nome!),
-              subtitle:
-                  Text('R\$${_listaProdutos[index].preco!.toStringAsFixed(2)}'),
-              trailing: Icon(Icons.arrow_forward),
-              onTap: () {},
-            );
-          }),*/
-/*
-          Column(/* Item 1 */
-            
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Bebidas do seu Zé\n",
-
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Montserrat',
-                          ),
-                          //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-            ],
-          ),
-          Column( //item 2
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Butequin do Carlos\n",
-
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Montserrat',
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-
-            ],
-          ),
-          Column( /* Item 3 */
-           
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Disk Bebidas\n",
-
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Montserrat',
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-            ],
-          ),
-        
-        ],
-      ),*/
-      
-      
-    
-    
-    
+ 
     drawer: SafeArea(
         child: Drawer(
           child: ListView(
             children: [
-             /*const UserAccountsDrawerHeader(
+             const UserAccountsDrawerHeader(
                 accountName: Text('Seu nome e sobrenome'),
                 accountEmail: Text('seuemail@mail.com'),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: AssetImage('assets/images/bart.jpg'),
                 ),
-              ),*/
+              ),
               ListTile(
                 leading: const Icon(Icons.receipt_long),
                 title: const Text("Pedidos"),
