@@ -1,6 +1,6 @@
 class Categoria {
   int? id;
-  int? nome;
+  String? nome;
 
   Categoria(this.id, this.nome);
 
