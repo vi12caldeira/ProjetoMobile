@@ -13,4 +13,6 @@ class Categoria {
     id = map['id'];
     nome = map['nome'];
   }
+
+
 }

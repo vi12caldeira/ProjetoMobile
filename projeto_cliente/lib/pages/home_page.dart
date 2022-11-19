@@ -27,14 +27,14 @@ class HomePage extends StatelessWidget {
                 label: const Text('Produtos'),
                 icon: Icon(Icons.fastfood),
                 onPressed: () {
-                  Navigator.pushNamed(context, "/refrigerante");
+                  Navigator.pushNamed(context, "/cadProduto");
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(234, 133, 42, 128),
                      elevation: 15,
                     //padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                     textStyle: TextStyle(
-                        fontSize: 15,)),
+                        fontSize: 18,)),
               ),
             ],
           ),
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                     primary: Color.fromARGB(234, 133, 42, 128),
                     padding: EdgeInsets.symmetric(horizontal: 10, /*vertical: 15*/),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
@@ -91,7 +91,7 @@ class HomePage extends StatelessWidget {
                     primary: Color.fromARGB(234, 133, 42, 128),
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
@@ -110,9 +110,9 @@ class HomePage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(234, 133, 42, 128),
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 24),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
@@ -125,10 +125,10 @@ class HomePage extends StatelessWidget {
           child: ListView(
             children: [
              const UserAccountsDrawerHeader(
-                accountName: Text('Seu nome e sobrenome'),
-                accountEmail: Text('seuemail@mail.com'),
+                accountName: Text('Vitoria'),
+                accountEmail: Text('vitoria@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/bart.jpg'),
+                  backgroundImage: AssetImage('assets/images/avatarFem.avif'),
                 ),
               ),
               ListTile(

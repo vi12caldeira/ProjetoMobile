@@ -8,6 +8,7 @@ import 'package:sqflite/sqflite.dart';
 class CategoriaDAO {
   static CategoriaDAO? _categoriaDAO;
   static Database? _database;
+  
   CategoriaDAO._createInstance();
 
   factory CategoriaDAO() {
@@ -31,7 +32,7 @@ class CategoriaDAO {
   void _createDb(Database db, int newVersion) async {
     await db.execute("CREATE TABLE categoria ("
         "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-        "nome TEXT,"
+        "nome TEXT"
         ")");
   }
 

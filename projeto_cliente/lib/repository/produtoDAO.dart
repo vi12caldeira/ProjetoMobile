@@ -1,9 +1,9 @@
-import 'dart:io';
-
 import 'package:navegacao_drawer/models/produto.dart';
-import 'package:path/path.dart';
+
+import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:path/path.dart';
 
 // ATENÇÃO: fazer o import de produto.dart
 class ProdutoDao {
@@ -11,6 +11,7 @@ class ProdutoDao {
   static Database? _database;
   ProdutoDao._createInstance();
 
+  
   factory ProdutoDao() {
     if (_produtoDao == null) _produtoDao = ProdutoDao._createInstance();
     return _produtoDao!;
@@ -20,14 +21,14 @@ class ProdutoDao {
     return _database!;
   }
 
-  Future<Database> initializeDatabase() async {
-    String _databaseName = 'projeto.db';
-    Directory directory = await getApplicationDocumentsDirectory();
-    String path = join(directory.path, _databaseName);
-    var produtosDatabase =
-        await openDatabase(path, version: 1, onCreate: _createDb);
-    return produtosDatabase;
-  }
+   Future<Database> initializeDatabase() async {
+      String _databaseName = 'produtos.db';
+      Directory directory = await getApplicationDocumentsDirectory();
+      String path = join(directory.path, _databaseName);
+      var produtosDatabase =
+      await openDatabase(path, version: 1, onCreate: _createDb);
+      return produtosDatabase;
+ }
 
   void _createDb(Database db, int newVersion) async {
     await db.execute("CREATE TABLE produtos ("
@@ -35,8 +36,6 @@ class ProdutoDao {
         "nome TEXT,"
         "preco REAL,"
         "quantidade INTEGER"
-        "id_categoria"
-        "FOREIGN KEY (id_categoria) REFERENCES categoria (id)"
         ")");
   }
 
@@ -107,6 +106,7 @@ class ProdutoDao {
     int? resultado = Sqflite.firstIntValue(list);
     return resultado!;
   }
+  
 
   Future close() async {
     Database db = await database;

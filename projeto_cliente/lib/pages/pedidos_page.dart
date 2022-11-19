@@ -47,10 +47,10 @@ class PedidosPage extends StatelessWidget {
 
 
               ),
-              child: Text("Bebidas do seu Zé\n"
-                  "\n       02/11/2022\n"
+              child: Text("Butiquin do Carlos\n"
+                  "\n       28/10/2022\n"
                   "\n    Pedido entregue\n"
-                  "\n    Detelhes do pedido: \n      -Pepsi 2l",
+                  "\n    Detelhes do pedido: \n      -Coca-cola 2l",
                 style: TextStyle(
                     fontSize: 20,
                     fontStyle: FontStyle.italic,
