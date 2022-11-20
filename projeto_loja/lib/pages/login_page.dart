@@ -22,8 +22,8 @@ class _LoginPageState extends State<LoginPage> {
    @override
   void initState() {
     super.initState();
-    User igor = User(1, 'iguin', '123456');
-    User vinicius = User(2, 'vinicin', '987654');
+    User igor = User(1, 'igor', '123456');
+    User vinicius = User(2, 'vinicius', '987654');
     User vitoria = User(3, 'vitoria', '00000');
    
     db.insertUser(igor);

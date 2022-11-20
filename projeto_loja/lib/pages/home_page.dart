@@ -38,11 +38,11 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+          
           SizedBox(height: 25),
+
           Row(children: [
             Container(
-              /*width: 180,
-              height: 150,*/
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
               ),
@@ -53,9 +53,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ]),
-          Row(
-            /* Item 1 */
-
+          Row( /* Item 1 */
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,9 +75,11 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
+
           SizedBox(height: 25),
-          Row(
-            /* Item 2 */
+
+          Row(/* Item 2 */
+            
 
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,10 +100,10 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 25),
-          Row(
-            /* Item 3 */
 
+          SizedBox(height: 25),
+
+          Row(/* Item 3 */
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -116,7 +116,7 @@ class HomePage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 209, 206, 51),
-                    padding: EdgeInsets.symmetric(horizontal: 42),
+                    padding: EdgeInsets.symmetric(horizontal: 44),
                     textStyle: TextStyle(
                       fontSize: 15,
                     )),
@@ -135,7 +135,7 @@ class HomePage extends StatelessWidget {
                 accountName: Text('Vitoria'),
                 accountEmail: Text('vitoria@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/bart.jpg'),
+                  backgroundImage: AssetImage('assets/images/avatarFem.png'),
                 ),
               ),
               ListTile(
