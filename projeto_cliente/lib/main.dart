@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+//import 'package:navegacao_drawer/models/categoria.dart';
+//import 'package:navegacao_drawer/models/produto.dart';
+//import 'package:navegacao_drawer/pages/cerveja.dart';
+//import 'package:navegacao_drawer/repository/categoriaDAO.dart';
+//import 'package:navegacao_drawer/repository/produtoDAO.dart';
 import 'package:navegacao_drawer/routes.dart';
 
-import 'pages/home_page.dart';
-main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -15,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       routes: routes(),
-    );
+    ); 
+    
   }
 }
-

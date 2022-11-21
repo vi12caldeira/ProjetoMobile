@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:navegacao_drawer/repository/produtoDAO.dart';
+import 'package:navegacao_drawer/models/produto.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,116 +10,46 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Distribuidora'),
+        title: const Text('Distribuidora - Cliente'),
         centerTitle: true,
-      ),
+        ),
       body:
       Column(
-
+        
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton.icon( //refrigerante
-                label: const Text('Refrigerante'),
-                icon: Icon(Icons.fastfood),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/refrigerante");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                    textStyle: TextStyle(
-                        fontSize: 15,)),
-              ),
-              ElevatedButton.icon( // cerveja
-                label: const Text('Cervejas'),
-                icon: Icon(Icons.fastfood),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/cerveja");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                    textStyle: TextStyle(
-                      fontSize: 15,)),
-              ),
+          Column(
             
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text("Produtos:",
+                style: TextStyle(color: Colors.black, fontSize: 21),),
+              ElevatedButton.icon( //refrigerante
+                label: const Text('Produtos'),
+                icon: Icon(Icons.fastfood),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/cadProduto");
+                },
+                style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                     elevation: 15,
+                    //padding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                    textStyle: TextStyle(
+                        fontSize: 18,)),
+              ),
             ],
           ),
           SizedBox(height: 25),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton.icon( //energetico
-              label: const Text('Energetico'),
-              icon: Icon(Icons.fastfood_outlined),
-              onPressed: () {
-                Navigator.pushNamed(context, "/energetico");
-              },
-              style: ElevatedButton.styleFrom(
-                  primary: Colors.grey,
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  textStyle: TextStyle(
-                    fontSize: 15,
-                  )
-               ),),
-              ElevatedButton.icon( //espumantes
-                label: const Text('Espumantes'),
-                icon: Icon(Icons.fastfood_sharp),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/espumante");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                    textStyle: TextStyle(
-                      fontSize: 15,)),
-              ),
-              
-            ],
-          ),
-          SizedBox(height: 25),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton.icon( //vinhos
-                label: const Text('Vinhos'),
-                icon: Icon(Icons.local_bar),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/vinho");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                    textStyle: TextStyle(
-                      fontSize: 15)),
-              ),
-              ElevatedButton.icon( //suco
-                label: const Text('Sucos'),
-                icon: Icon(Icons.local_drink),
-                onPressed: () {
-                  Navigator.pushNamed(context, "/suco");
-                },
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 15, vertical: 13),
-                    textStyle: TextStyle(
-                      fontSize: 15,)),
-              ),
-            ],
-          ),
           Row(children: [
             Container(
-              width: 180,
-              height: 150,
+              /*width: 180,
+              height: 150,*/
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Text(
-                "\n \n \n \n \n"
-                    "Últimas compras:\n",
-                style: TextStyle(color: Colors.black, fontSize: 18),
+                
+                    "Últimas compras:",
+                style: TextStyle(color: Colors.black, fontSize: 21),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -135,10 +67,10 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos1");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 25, /*vertical: 15*/),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 10, /*vertical: 15*/),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
@@ -156,10 +88,10 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos2");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
@@ -177,175 +109,26 @@ class HomePage extends StatelessWidget {
                   Navigator.pushNamed(context, "/pedidos3");
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.grey,
-                    padding: EdgeInsets.symmetric(horizontal: 42),
+                    primary: Color.fromARGB(234, 133, 42, 128),
+                    padding: EdgeInsets.symmetric(horizontal: 24),
                     textStyle: TextStyle(
-                      fontSize: 15,)),
+                      fontSize: 18,)),
               ),
             ],
           ),
           
         ],
       ),
-
-          /*
-          Column(
-            /* Item 1 */
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Bebidas do seu Zé\n",
-
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Montserrat',
-                          ),
-                          //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-            ],
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Butequin do Carlos\n",
-
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Montserrat',
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-
-            ],
-          ),
-          Column(
-            /* Item 3 */
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                  margin: EdgeInsets.only(left: 10, top: 10, right: 10),
-                  padding: EdgeInsets.only(left: 22),
-                  width: 1000,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      bottom: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                      left: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //Borderside
-                      right: BorderSide(
-                          width: 1,
-                          color: Colors.black12,
-                          style: BorderStyle.solid), //BorderSide
-                    ),
-                    borderRadius: BorderRadius.circular(6.0),
-                  ),
-                  child: (
-                      Text("Disk Bebidas\n",
-
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Montserrat',
-                        ),
-                        //textAlign: TextAlign.center,
-                      )
-                  )
-              ),
-            ],
-          ),
-        ],
-      ),*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      drawer: SafeArea(
+ 
+    drawer: SafeArea(
         child: Drawer(
           child: ListView(
             children: [
-              const UserAccountsDrawerHeader(
-                accountName: Text('Seu nome e sobrenome'),
-                accountEmail: Text('seuemail@mail.com'),
+             const UserAccountsDrawerHeader(
+                accountName: Text('Vitoria'),
+                accountEmail: Text('vitoria@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/bart.jpg'),
+                  backgroundImage: AssetImage('assets/images/avatarFem.avif'),
                 ),
               ),
               ListTile(
@@ -383,16 +166,21 @@ class HomePage extends StatelessWidget {
                 title: const Text("Logout"),
                 trailing: const Icon(Icons.arrow_forward),
                 onTap: () {
-                  print("Logout");
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, "/");
                 },
               ),
             ],
           ),
         ),
       ),
+    
+    
+    
+    
+    
+    
     );
+    
   }
-
-
-
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "33081795743",
+    "firebase_url": "https://trabalho-mobille-default-rtdb.firebaseio.com",
+    "project_id": "trabalho-mobille",
+    "storage_bucket": "trabalho-mobille.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33081795743:android:877860be02c7c7be8aeeaa",
+        "android_client_info": {
+          "package_name": "com.example.projeto_cliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33081795743-c55am4cj3iffd5f33150gi49pi3ku26j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB14bXEgbjIwkPsxa3vgvI9J8NMl3wt2Ow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33081795743-c55am4cj3iffd5f33150gi49pi3ku26j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "33081795743-15s05d3jano610nqggqs1e5n9jvv4e8p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.projetoCliente"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
