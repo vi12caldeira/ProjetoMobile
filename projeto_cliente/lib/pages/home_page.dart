@@ -125,10 +125,10 @@ class HomePage extends StatelessWidget {
           child: ListView(
             children: [
              const UserAccountsDrawerHeader(
-                accountName: Text('Vitoria'),
-                accountEmail: Text('vitoria@gmail.com'),
+                accountName: Text('Igor'),
+                accountEmail: Text('igor@gmail.com'),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/avatarFem.avif'),
+                  backgroundImage: AssetImage('assets/images/avatarMas.png'),
                 ),
               ),
               ListTile(
